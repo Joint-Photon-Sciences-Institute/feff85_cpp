@@ -30,5 +30,8 @@ tests/*.png
 # Backup files
 *.bak
 
+# Sphinx documentation build
+docs/_build/
+
 # Troubleshooting (development only)
 troubleshoot_*/
