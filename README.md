@@ -16,19 +16,43 @@ A complete C++ port of the FEFF85 code for ab initio calculations of X-ray Absor
 
 ## Building from Source
 
-```bash
-# Clone the repository
-git clone <repository-url>
-cd feff85exafs-cpp-production
+### Windows (MSYS2/MinGW)
 
-# Configure and build (Release mode)
+1. Install [MSYS2](https://www.msys2.org/) and open the **MINGW64** shell.
+
+2. Install the required packages:
+   ```bash
+   pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
+   ```
+
+3. Clone and build:
+   ```bash
+   git clone https://github.com/Joint-Photon-Sciences-Institute/feff85_cpp.git
+   cd feff85_cpp
+
+   cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+   cmake --build build
+   ```
+
+4. The executable will be at `build/apps/feff8l.exe`.
+
+> **Note:** You must build from an MSYS2 MINGW64 shell (not CMD or PowerShell) so the compiler can find its runtime libraries during the build process.
+
+### Linux / macOS
+
+```bash
+# Install dependencies (Ubuntu/Debian example)
+sudo apt install build-essential cmake ninja-build
+
+# Clone and build
+git clone https://github.com/Joint-Photon-Sciences-Institute/feff85_cpp.git
+cd feff85_cpp
+
 cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build
-
-# The executable will be at:
-#   build/apps/feff8l.exe    (Windows)
-#   build/apps/feff8l        (Linux/macOS)
 ```
+
+The executable will be at `build/apps/feff8l`.
 
 The build statically links the C++ runtime, so the resulting executable is fully self-contained with no external DLL dependencies.
 
@@ -85,7 +109,7 @@ The script will:
 ## Project Structure
 
 ```
-feff85exafs-cpp-production/
+feff85_cpp/
 ├── apps/                   # Standalone executable (feff8l)
 ├── cmake/                  # CMake helper modules
 ├── include/feff/           # Public API headers
