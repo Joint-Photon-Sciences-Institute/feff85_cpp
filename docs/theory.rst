@@ -17,10 +17,27 @@ The EXAFS equation implemented by FEFF is:
    \chi(k) = S_0^2 \sum_{\Gamma} \frac{N_\Gamma |f_\mathrm{eff}(k)|}{k R_\Gamma^2}
    \sin(2kR_\Gamma + \Phi_\Gamma(k)) \, e^{-2\sigma_\Gamma^2 k^2} \, e^{-2R_\Gamma/\lambda(k)}
 
-where the sum runs over scattering paths :math:`\Gamma`, :math:`f_\mathrm{eff}`
-is the effective curved-wave scattering amplitude, :math:`R_\Gamma` is the
-effective half-path length, :math:`\sigma_\Gamma^2` is the Debye-Waller factor,
-and :math:`\lambda(k)` is the photoelectron mean free path.
+where:
+
+- :math:`k = \sqrt{2m(E - E_0)/\hbar^2}` is the photoelectron wave vector,
+  with :math:`E` the photon energy and :math:`E_0` the absorption edge energy
+- :math:`S_0^2` is the passive electron reduction factor (amplitude reduction
+  factor), typically 0.8--1.0, accounting for many-body effects at the
+  absorbing atom
+- The sum runs over scattering paths :math:`\Gamma`
+- :math:`N_\Gamma` is the path degeneracy (number of equivalent paths)
+- :math:`f_\mathrm{eff}(k)` is the effective curved-wave scattering amplitude
+  for path :math:`\Gamma`
+- :math:`R_\Gamma` is the effective half-path length (half the total path
+  distance)
+- :math:`\Phi_\Gamma(k)` is the net scattering phase shift for the path,
+  including the central-atom phase shift and all scattering phase shifts
+  along the path
+- :math:`\sigma_\Gamma^2` is the mean-square relative displacement
+  (Debye-Waller factor), accounting for thermal and static disorder in the
+  path length
+- :math:`\lambda(k)` is the photoelectron mean free path, accounting for
+  inelastic losses
 
 The 6-Stage Pipeline
 --------------------
