@@ -23,9 +23,10 @@ PipelineConfig
        std::string input_file = "feff.inp";
    };
 
-Each boolean flag controls whether the corresponding pipeline stage runs.
-Setting a flag to ``false`` skips that stage and all stages before it, assuming
-the required intermediate files already exist on disk.
+Each boolean flag independently controls whether the corresponding pipeline
+stage runs. Setting a flag to ``false`` skips only that stage, assuming
+the required intermediate files already exist on disk. Note that RDINP (input
+parsing) always runs regardless of flag settings.
 
 Functions
 ---------

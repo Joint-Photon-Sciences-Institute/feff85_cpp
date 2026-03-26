@@ -28,7 +28,7 @@ organized into sections corresponding to each pipeline module:
 **Atomic Structure (ATOMS card):**
    - ``ratx[natx][3]`` --- atomic coordinates in Angstroms
    - ``iphatx[natx]`` --- potential type index for each atom
-   - ``nat`` --- number of atoms
+   - ``natt`` --- number of atoms
 
 **Global Parameters:**
    - ``polarization`` --- polarization vector (if enabled)
@@ -52,7 +52,7 @@ organized into sections corresponding to each pipeline module:
 
 **MOD4 (PATH) Parameters:**
    - ``rmax`` --- max half-path length
-   - ``nleg`` --- max legs per path
+   - ``nlegxx`` --- max legs per path
    - ``pcritk``, ``pcrith`` --- path filtering criteria
 
 **MOD5 (GENFMT) Parameters:**

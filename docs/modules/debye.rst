@@ -3,7 +3,7 @@ Debye Module
 
 **Namespace:** ``feff::debye``
 
-**Header:** ``src/debye/sigms.hpp``
+**Headers:** ``src/debye/debye.hpp``, ``src/debye/sigrem.hpp``
 
 The Debye module calculates Debye-Waller factors using the correlated Debye
 model for thermal disorder in EXAFS.

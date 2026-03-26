@@ -15,22 +15,35 @@ Data Structures
 ``ParallelState``
    Holds the parallel execution state:
 
-   - ``par_type`` --- parallel mode (0 = sequential)
-   - ``this_process`` --- process rank (0 for sequential)
    - ``numprocs`` --- number of processes (1 for sequential)
+   - ``my_rank`` --- MPI rank (0 for sequential)
+   - ``this_process`` --- process index (0 for sequential)
+   - ``master`` --- true if this is the master process
+   - ``worker`` --- true if this is a worker process
+   - ``parallel_run`` --- true if running in parallel mode
+   - ``par_type`` --- output mode (0=not initialized, 1=normal, 2=suppress output, 3=no log file)
 
 Functions
 ---------
 
-``void par_begin(ParallelState& state, int argc, char* argv[])``
-   Initialize the parallel execution environment.
+``ParallelState& state()``
+   Global accessor for the parallel state singleton.
 
-``void par_end(ParallelState& state)``
-   Shut down the parallel execution environment.
+``void par_begin()``
+   Initialize the parallel execution environment (``MPI_Init`` in parallel mode).
 
-``void par_barrier(ParallelState& state)``
+``void par_end()``
+   Normal shutdown (``MPI_Finalize`` in parallel mode).
+
+``void par_stop(const std::string& msg)``
+   Abnormal termination with error message. Marked ``[[noreturn]]``.
+
+``void par_barrier()``
    Synchronization barrier (no-op in sequential mode).
 
-``void mpe_decomp1d(int n, int numprocs, int myid, int& s, int& e)``
-   Decompose a 1D range ``[1, n]`` across processes. Returns the start ``s``
-   and end ``e`` indices for process ``myid``.
+``void mpe_decomp1d(int n, int num_procs, int myid, int& start, int& end)``
+   Decompose a 1D range ``[1, n]`` across processes. Returns the ``start``
+   and ``end`` indices (1-based, inclusive) for process ``myid``.
+
+``double seconds()``
+   Wall clock time in seconds.

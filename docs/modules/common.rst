@@ -18,9 +18,10 @@ Logging
    Returns the global logger instance. Writes to both ``stdout`` and
    ``feff.log``.
 
-``void wlog(const std::string& msg)``
-   Write a message to the log. Respects parallel execution settings
-   (suppresses output on non-root processes).
+``Logger::wlog(const std::string& msg)``
+   Write a message to the log. Called as ``logger().wlog(msg)``.
+   Respects parallel execution settings (suppresses output on non-root
+   processes).
 
 Radial Grid
 -----------
