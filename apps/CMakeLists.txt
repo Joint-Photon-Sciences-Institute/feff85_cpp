@@ -4,10 +4,14 @@ add_executable(feff8l feff8l.cpp)
 target_link_libraries(feff8l PRIVATE feffpipeline)
 
 # Increase stack size for large arrays in POT/ATOM calculations
+# Static link C++ runtime so the executable is self-contained (no DLL dependencies)
 if(MSVC)
     target_link_options(feff8l PRIVATE /STACK:16777216)
 else()
-    target_link_options(feff8l PRIVATE -Wl,--stack,67108864)
+    target_link_options(feff8l PRIVATE
+        -Wl,--stack,67108864
+        -static-libgcc -static-libstdc++
+    )
 endif()
 
 # Individual module drivers (optional)
