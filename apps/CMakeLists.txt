@@ -11,6 +11,7 @@ else()
     target_link_options(feff8l PRIVATE
         -Wl,--stack,67108864
         -static-libgcc -static-libstdc++
+        -Wl,-Bstatic -lwinpthread
     )
 endif()
 
