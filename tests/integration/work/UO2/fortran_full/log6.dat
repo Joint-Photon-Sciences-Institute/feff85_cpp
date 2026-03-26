@@ -1,0 +1,35 @@
+ Calculating chi...
+ feffdt, feff.pad to feff.dat conversion: Feff8L (EXAFS)      release  0.1
+ Uraninite                                      Feff8L (EXAFS)       0.1
+ Wyckoff, R. W. G.
+ Second edition. Interscience Publishers, New York, New York
+ Fluorite structure
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=92 Rmt= 1.631 Rnm= 1.711 L3 shell
+ Pot 1 Z=92 Rmt= 1.636 Rnm= 1.717
+ Pot 2 Z= 8 Rmt= 1.044 Rnm= 1.096
+ Gam_ch=8.104E+00 H-L exch
+ Mu=-6.403E-01 kf=2.192E+00 Vint=-1.895E+01 Rs_int= 1.655
+ PATH  Rmax= 5.500,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+      17 paths to process
+    path     filename
+       1     feff0001.dat
+       2     feff0002.dat
+       3     feff0003.dat
+       4     feff0004.dat
+       5     feff0005.dat
+       6     feff0006.dat
+       7     feff0007.dat
+       8     feff0008.dat
+       9     feff0009.dat
+      10     feff0010.dat
+      11     feff0011.dat
+      12     feff0012.dat
+      13     feff0013.dat
+      14     feff0014.dat
+      15     feff0015.dat
+      16     feff0016.dat
+      17     feff0017.dat
+    Use all paths with cw amplitude ratio   4.00%
+    S02  0.909  Global sig2  0.00000
+ Done with module 6: DW + final sum over paths.

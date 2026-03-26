@@ -1,0 +1,30 @@
+ Uraninite                                      Feff8L (EXAFS)       0.1
+ Wyckoff, R. W. G.
+ Second edition. Interscience Publishers, New York, New York
+ Fluorite structure
+ POT  Non-SCF, core-hole, AFOLP (folp(0)= 1.150)
+ Abs   Z=92 Rmt= 1.631 Rnm= 1.711 L3 shell
+ Pot 1 Z=92 Rmt= 1.636 Rnm= 1.717
+ Pot 2 Z= 8 Rmt= 1.044 Rnm= 1.096
+ Gam_ch=8.104E+00 H-L exch
+ Mu=-6.403E-01 kf=2.192E+00 Vint=-1.895E+01 Rs_int= 1.655
+ PATH  Rmax= 5.500,  Keep_limit= 0.00, Heap_limit 0.00  Pwcrit= 2.50%
+ -----------------------------------------------------------------------
+    file        sig2   amp ratio    deg    nlegs  r effective
+ feff0001.dat 0.00000   100.000     8.000     2   2.3678
+ feff0002.dat 0.00000     6.637    24.000     3   3.7349
+ feff0003.dat 0.00000    50.510    12.000     2   3.8666
+ feff0004.dat 0.00000    12.530    24.000     3   4.3011
+ feff0005.dat 0.00000    17.910    48.000     3   4.3011
+ feff0006.dat 0.00000    36.230    24.000     2   4.5340
+ feff0007.dat 0.00000     7.122     8.000     3   4.7356
+ feff0008.dat 0.00000    18.110     8.000     4   4.7356
+ feff0009.dat 0.00000     7.170     8.000     4   4.7356
+ feff0010.dat 0.00000     7.831    24.000     4   4.7356
+ feff0011.dat 0.00000     6.518    24.000     4   4.7356
+ feff0012.dat 0.00000    21.270    48.000     3   4.8179
+ feff0013.dat 0.00000     6.039    24.000     4   5.1019
+ feff0014.dat 0.00000     6.508    96.000     3   5.3842
+ feff0015.dat 0.00000     8.512    96.000     3   5.3842
+ feff0016.dat 0.00000    25.060    96.000     3   5.3842
+ feff0017.dat 0.00000     9.231     6.000     2   5.4682
