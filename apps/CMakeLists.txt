@@ -9,9 +9,8 @@ if(MSVC)
     target_link_options(feff8l PRIVATE /STACK:16777216)
 else()
     target_link_options(feff8l PRIVATE
+        -static
         -Wl,--stack,67108864
-        -static-libgcc -static-libstdc++
-        -Wl,-Bstatic -lwinpthread
     )
 endif()
 
